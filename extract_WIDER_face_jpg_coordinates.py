@@ -61,6 +61,11 @@ def scale_point_values(finalPts, imgSizeList):
 
         scaled_points.append(tmp_scaled_points)
         counter += 1
+
+        if counter < len(imgSizeList):
+            h = imgSizeList[counter][0]
+            w = imgSizeList[counter][1]
+
     return scaled_points
 
 
@@ -89,5 +94,7 @@ jpeg_list = []
 parseNames(lines, finalPts, jpeg_list)
 text_names = getTextNames(jpeg_list)
 imgSizeList = get_image_size(text_names)
+
 points_parsed = scale_point_values(finalPts, imgSizeList)
 create_text_file(jpeg_list, points_parsed)
+
