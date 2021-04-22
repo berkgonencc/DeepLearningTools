@@ -34,7 +34,6 @@ def convert_yolo_format(txt_files):
 
 os.chdir("C:\\Users\\berkg\\OneDrive\\Desktop\\all_files")
 all_files = os.listdir()  # Importing all files to a list
-jpg_files = glob.glob('*.jpg', recursive=True)  # Taking only jpg files from the directory into a list
 
 
 # Checking if there is a txt file for each jpeg file in return..
